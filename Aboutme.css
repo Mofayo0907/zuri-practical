@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,100;0,300;0,400;1,300&family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:ital,wght@0,100;0,300;0,400;1,300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+/* /////////////////////////////////////////////////
+ABOUT ME
+//////////////////////////////////////////////// */
+.section{
+    background: #ddd;
+    position: relative;
+    width: 100%;
+    height: 115vh;
+}
+
+nav{
+    display: flex;
+    width: 84%;
+    margin: auto;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: right;
+    color: rgb(2, 5, 34);
+    text-decoration: none;
+}
+
+nav ul li a{
+    color: rgb(2, 5, 34);
+    text-decoration: none;
+    font-weight: bold;
+    font-style: normal;
+    /* font-size: 19px; */
+}
+
+nav ul li{
+    display: inline;
+    list-style: none;
+    margin: 10px 20px;
+    font-size: 18px;
+}
+
+nav ul li a:hover{
+    color: brown;
+}
+
+.detail{
+    margin-top: 15%;
+    margin-left: 8%;
+}
+
+.detail h1{
+    font-size: 45px;
+    color: rgb(1, 1, 37);
+    margin-bottom: 20px;
+    font-weight: 900px;
+}
+
+span{
+    color: indianred;
+}
+
+.detail p{
+    color: rgb(2, 2, 27);
+    line-height: 25px;
+    /* font-family: 'Sacramento', cursive; */
+    font-size: 18px;
+}
+
+.image{
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+
+.image img{
+    height: 80%;
+    position: absolute;
+    max-width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+    border-radius: 10px;
+}
+
+.image:hover .joy{
+    left: 45%;
+    overflow: visible;
+}
+.aboutbutton{
+    background-color: #fff;
+    border: 0 solid #e2e8f0;
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+    color: #0d172a;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Raleway';
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none #0d172a solid;
+    text-decoration-thickness: auto;
+    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 50px 180px;
+  }
+
+  .aboutbutton a{
+      color: rgb(2, 2, 27);
+      text-decoration: none;
+  }
+  
+  .aboutbutton:hover {
+    background-color: indianred;
+    color: #fff;
+  }
+  
+  @media (min-width: 768px) {
+    .aboutbutton {
+      font-size: 1.125rem;
+      padding: 1rem 2rem;
+    }
+  }
+
+ul{
+    list-style: none;
+    color: rgb(2, 5, 34);
+    font-size: large;
+}
+
+.menu{
+    display: block;
+    position: relative;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.menu:hover > .menu-title:before{
+    border-top-width: 0;
+    transition: 0.2s border-top-width ease-in, 0.3s border-top-color;
+}
+
+.menu:hover > .menu-title::after{
+    border-bottom-width: 5px;
+    transition: 0.2s 0.2s border-bottom-width ease-out;
+}
+
+.menu:not(:hover) > .dropdown{
+    padding: 4px 0;
+    background: #ddd;
+    z-index: 99;
+}
+
+.menu:not(:hover) > .dropdown::after{
+    border-top-color: #ddd;
+}
+
+.menu:not(:hover) > .menu-title::after{
+    border-top-color: #ddd;
+}
+
+.menu:not(:hover) > .dropdown > *{
+    visibility: hidden;
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+    z-index: 99;
+    color: rgba (25, 25, 25, 0);
+    transition: 0.5s 0.1s height, 0.5s 0.1s padding, 0.5s 0.1s margin, 0.3s color, 0.6s visibility;
+}
+
+.hlist > *{
+    float: left;
+}
+
+.hlist > * > *{
+    margin-left: 0;
+}
+
+.menu-title{
+    display: block;
+    width: 350px;
+    height: 40px;
+    background: rgb(2, 5, 34);
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s background-color;
+}
+
+.menu-title:before{
+    content: '';
+    display: block;
+    height: 0;
+    border-bottom: 0 solid #ddd;
+    border-top: 5px solid rgb(2, 5, 34);
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 101;
+    transition: 0.2s 0.2s border-top ease-out, 0.3s border-top-color;
+}
+
+.menu-title:hover{
+    background-color: indianred;
+}
+.menu-title:hover::before{
+    border-top-color: aqua;
+}
+
+.menu-title::after{
+    content: '';
+    display: block;
+    height: 0;
+    border-bottom: 0 solid #ddd;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 101;
+    transition: 0.2s border-bottom ease-in;
+}
+
+.dropdown{
+    min-width: 100%;
+    padding: 15px 0;
+    position: absolute;
+    background-color: #ddd;
+    z-index: 100;
+    transition: 0.5s border-top;
+}
+
+.dropdown:after{
+    content: '';
+    display: block;
+    height: 0;
+    border-top: 5px solid rgb(2, 5, 34);
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 101;
+    transition: 0.5s border-top;
+}
+
+.dropdown > * {
+    overflow: hidden;
+    height: 30px;
+    padding: 5px 10px;
+    white-space: nowrap;
+    background: #ddd;
+    transition: 0.5s height cubic-bezier(0.73, 0.32, 0.34, 1.5), 0.5s padding, cubic-bezier(0.73, 0.32, 0.34, 1.5), 0.5s margin, cubic-bezier(0.73, 0.32, 0.34, 1.5), 0.5s 0.2s color, 0.2s background-color;
+}
+
+.dropdown > *:hover{
+    background-color: #0d172a;
+}
+
+  /* FOOTER */
+footer{
+    background-color: rgb(2, 2, 27);
+    width: 100%;
+    height: 25vh;
+    color: rgb(125, 125, 126);
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+    text-justify: auto;
+    font-family: 'Poppins';
+    margin: 0;
+}
+
+footer ul h3{
+    color: white;
+    text-transform: uppercase;
+}
+footer ul li{
+    list-style: none;
+}
+
+footer p{
+    margin-top: 50px;
+}
